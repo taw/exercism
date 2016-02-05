@@ -16,9 +16,11 @@ use Exporter 5.57 qw(import);
 our @EXPORT_OK = qw(hey);
 
 sub hey {
-#
-# YOUR CODE GOES HERE
-#
+  $_ = $_[0];
+  return "Fine. Be that way!" unless /\S/;
+  return "Whoa, chill out!" if /\p{LU}/ and not /\p{LL}/;
+  return "Sure." if /\?$/;
+  "Whatever."
 }
 
 1;
