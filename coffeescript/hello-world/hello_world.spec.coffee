@@ -1,4 +1,6 @@
-HelloWorld = require "./hello_world"
+HelloWorld = require("./hello_world")["HelloWorld"]
+
+console.log(HelloWorld)
 
 describe "HelloWorld", ->
   hello_world = new HelloWorld()
